@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #091921;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#07d3b8, #e9da05);
+    clip-path: circle(22% at 30% 15%);
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#030a02, #5d09f8);
+    clip-path: circle(22% at 73% 90%);
+}
+
+.container {
+    position: relative;
+    background: #ffffff05;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 10;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid #ffffff20;
+    border-left: 1px solid #ffffff20;
+    box-shadow: 5px 5px 30px #00000020;
+}
+
+.container .calculator {
+    position: relative;
+    display: grid;
+}
+
+.container .calculator .value {
+    grid-column: span 6;
+    height: 100px;
+    width: 300px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 30px;
+    background: transparent;
+    color: #fff;
+    border-bottom: 1px solid #ffffff05;
+    border-right: 1px solid #ffffff05;
+}
+
+.container .calculator span {
+    display: grid;
+    place-items: center;
+    height: 80px;
+    width: 50px;
+    color: #fff;
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 15px;
+    user-select: none;
+    border-bottom: 1px solid #ffffff05;
+    border-right: 1px solid #ffffff05;
+    transition: .5s;
+}
+
+.container .calculator span:hover {
+    transition: 0s;
+    background: #ffffff10;
+}
+
+.container .calculator span:active {
+    background: #e0e6e1;
+    color: #192f00;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 550px) {
+    
+    .container .calculator .value {
+        height: 200px;
+        width: 450px;
+        padding: 10px;
+    }
+    
+    .container .calculator span {
+        height: 100px;
+        width: 75px;
+        font-weight: 400;
+        font-size: 20px;
+    }
+    
+    .container .calculator span:active {
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
