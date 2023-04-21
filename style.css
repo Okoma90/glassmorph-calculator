@@ -99,13 +99,13 @@ body::after {
 @media screen and (min-width: 550px) {
     
     .container .calculator .value {
-        height: 200px;
+        height: 15vh;
         width: 450px;
         padding: 10px;
     }
     
     .container .calculator span {
-        height: 100px;
+        height: 11vh;
         width: 75px;
         font-weight: 400;
         font-size: 20px;
